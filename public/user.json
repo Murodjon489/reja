@@ -1,10 +1,10 @@
 {
-  "name": "Steve",
+  "name": "JUSTIN",
   "profession": "Software Enginner",
-  "age": "20",
+  "age": "15",
   "residence": "s.Korea",
   "adress": "S.Korea, Busan",
-  "languages": ["Uzbek", "Korean", "English"],
+  "languages": ["Uzbek", "Korean", "English", "Russian"],
   "skills": ["Html", "Css", "JS", "NodeJS", "Python"],
   "extraSkills": [
     "Bootstrap",
@@ -38,5 +38,5 @@
     "9$"
   ],
   "famous_words": ["World is beatiful with flowers"],
-  "famuos_name": ["Steve Jobs"]
+  "famuos_name": ["Murodjon Axmadaliyev"]
 }
