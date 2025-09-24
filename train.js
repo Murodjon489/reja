@@ -1,4 +1,25 @@
+// DEFINE
+function qoldiqliBolish(a, b, callback) {
+  if (b === 0) {
+    callback("Mahraj nolga teng emas!", null);
+  } else {
+    const c = a % b;
+    callback(null, c);
+  }
+}
+
+// CALL
+qoldiqliBolish(7, 5, (err, data) => {
+  if (err) {
+    console.log("ERROR:", err);
+  } else {
+    console.log("data:", data);
+    console.log("MANTIQLAR...");
+  }
+});
+
 //A TASK: 1-parametr harf, 2-parametr son
+/*
 function countLetter(letter, word) {
   let count = 0;
   for (let i = 0; i < word.length; i++) {
@@ -28,7 +49,7 @@ function CountLetter(letter, word) {
 console.log(CountLetter("e", "energy")); // kutilgan javob : 2
 console.log(CountLetter("n", "energy")); // kutilgan javob : 1
 console.log(CountLetter("x", "energy")); // kutilgan javob : 0
-
+*/
 /* 21 DARS: CALLBACK function
 console.log("Jack Ma maslahatlari");
 
