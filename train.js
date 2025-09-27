@@ -1,22 +1,46 @@
-// DEFINE
-function qoldiqliBolish(a, b, callback) {
-  if (b === 0) {
-    callback("Mahraj nolga teng emas!", null);
-  } else {
-    const c = a % b;
-    callback(null, c);
+//B-TASK:
+function counterA(matn) {
+  let count = 0;
+  for (let i = 0; i < matn.length; i++) {
+    if (matn[i] >= "0" && matn[i] <= "9") {
+      count++;
+    }
   }
+  return count;
+}
+console.log(counterA("ad2a54y79wet0sfgb9")); // 7
+
+function counterB(matn) {
+  let count = 0;
+  for (let i = 0; i < matn.length; i++) {
+    if (matn[i] >= "0" && matn[i] <= "9") {
+      count++;
+    }
+  }
+  return count;
 }
 
-// CALL
-qoldiqliBolish(7, 5, (err, data) => {
-  if (err) {
-    console.log("ERROR:", err);
-  } else {
-    console.log("data:", data);
-    console.log("MANTIQLAR...");
-  }
-});
+console.log(counterB("dcf5gjh57k56jk43,45n44k")); // 11
+
+// DEFINE
+// function qoldiqliBolish(a, b, callback) {
+//   if (b === 0) {
+//     callback("Mahraj nolga teng emas!", null);
+//   } else {
+//     const c = a % b;
+//     callback(null, c);
+//   }
+// }
+
+// // CALL
+// qoldiqliBolish(7, 5, (err, data) => {
+//   if (err) {
+//     console.log("ERROR:", err);
+//   } else {
+//     console.log("data:", data);
+//     console.log("MANTIQLAR...");
+//   }
+// });
 
 //A TASK: 1-parametr harf, 2-parametr son
 /*
