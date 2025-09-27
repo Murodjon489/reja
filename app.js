@@ -12,7 +12,9 @@ fs.readFile("database/user.json", "utf8", (err, data) => {
 });
 
 //MongoDB chaqirish
+// MongoDB chaqirish
 const db = require("./server").db();
+//const db = require("./server").db();
 
 //1: Kirish code
 app.use(express.static("public"));
@@ -26,6 +28,7 @@ app.set("view engine", "ejs");
 
 //4: Routing code
 app.post("/create-item", (req, res) => {
+  console.log("user entered /create-item");
   console.log(req.body);
   const new_reja = req.body.reja;
   db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
@@ -43,15 +46,15 @@ app.get("/author", (req, res) => {
 });
 
 app.get("/", function (req, res) {
+  console.log("user entered /");
   db.collection("plans")
     .find()
     .toArray((err, data) => {
       if (err) {
         console.log(err);
-        res.end("something went wrong");
+        res.json("something went wrong");
       } else {
-        console.log(data);
-        res.render("reja");
+        res.render("reja", { items: data });
       }
     });
 });
