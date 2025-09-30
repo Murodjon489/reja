@@ -15,6 +15,9 @@ mongodb.connect(
     else {
       console.log("mongoDB on connection succeed");
 
+      db = client.db(); // <--- shu qatorni qo‘sh
+      module.exports = { db }; // <--- db ni eksport qil
+
       module.exports = client;
 
       const app = require("./app");
