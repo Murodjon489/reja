@@ -1,4 +1,49 @@
+//C TASK:
+class Shop {
+  constructor(non, osh, choy) {
+    this.non = non; // non soni
+    this.osh = osh; // osh soni
+    this.choy = choy; // choy soni
+  }
+
+  qoldiq() {
+    let vaqt = new Date();
+    let soat = vaqt.getHours();
+    let daqiqa = vaqt.getMinutes();
+    console.log(
+      `Hozir ${soat}:${daqiqa} da ${this.non} ta non, ${this.osh} ta osh va ${this.choy} ta choy mavjud`
+    );
+  }
+
+  sotilish(nomi, son) {
+    if (this[nomi] !== undefined && this[nomi] >= son) {
+      this[nomi] -= son;
+      console.log(`${son} ta ${nomi} sotildi`);
+    } else {
+      console.log(`Sotish mumkin emas: yetarli ${nomi} yo'q`);
+    }
+  }
+
+  qabul(nomi, son) {
+    if (this[nomi] !== undefined) {
+      this[nomi] += son;
+      console.log(`${son} ta ${nomi} qabul qilindi`);
+    } else {
+      console.log("Bunday mahsulot yoq");
+    }
+  }
+}
+
+// TEST
+const shop = new Shop(4, 5, 2);
+
+shop.qoldiq();
+shop.sotilish("non", 3);
+shop.qabul("choy", 4);
+shop.qoldiq();
+
 //B-TASK:
+/*
 function counterA(matn) {
   let count = 0;
   for (let i = 0; i < matn.length; i++) {
@@ -21,7 +66,7 @@ function counterB(matn) {
 }
 
 console.log(counterB("dcf5gjh57k56jk43,45n44k")); // 11
-
+*/
 // DEFINE
 // function qoldiqliBolish(a, b, callback) {
 //   if (b === 0) {
