@@ -1,5 +1,60 @@
+//D TASK:
+function checkContent(s1, s2) {
+  if (s1.length !== s2.length) {
+    return false; // uzunliklar farqi bo'lsa agar, false
+  }
+
+  let count1 = {};
+  let count2 = {};
+
+  for (let i = 0; i < s1.length; i++) {
+    let char = s1[i].toLowerCase();
+    count1[char] = (count1[char] || 0) + 1;
+  }
+
+  for (let i = 0; i < s2.length; i++) {
+    let char = s2[i].toLowerCase();
+    count2[char] = (count2[char] || 0) + 1;
+  }
+
+  for (let char in count1) {
+    if (count1[char] !== count2[char]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+console.log(checkContent("mitgroup", "gmtiprou")); // true
+console.log(checkContent("Hello", "Olelh")); // true
+console.log(checkContent("Test", "Taste")); // false
+
+//Qo'shimcha:
+function checkAccess(user) {
+  if (user.role === "admin" && user.isActive === true) {
+    return "Full access";
+  } else if (user.role === "mentor" && user.isActive === true) {
+    return "Limited access";
+  } else {
+    return "No access";
+  }
+}
+
+let user1 = { name: "Justin", role: "admin", isActive: true };
+let user2 = { name: "John", role: "mentor", isActive: true };
+let user3 = { name: "Beck", role: "user", isActive: false };
+let user4 = { name: "Mina", role: "admin", isActive: false };
+let user5 = { name: "Martin", role: "mentor", isActive: false };
+
+console.log(checkAccess(user1)); // Full access
+console.log(checkAccess(user2)); // Limited access
+console.log(checkAccess(user3)); // No access
+console.log(checkAccess(user4)); // No access
+console.log(checkAccess(user5)); // No access
+
 //C TASK:
-class Shop {
+/*class Shop {
   constructor(non, osh, choy) {
     this.non = non; // non soni
     this.osh = osh; // osh soni
@@ -34,6 +89,7 @@ class Shop {
   }
 }
 
+
 // TEST
 const shop = new Shop(4, 5, 2);
 
@@ -41,7 +97,7 @@ shop.qoldiq();
 shop.sotilish("non", 3);
 shop.qabul("choy", 4);
 shop.qoldiq();
-
+*/
 //B-TASK:
 /*
 function counterA(matn) {
