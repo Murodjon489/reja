@@ -28,7 +28,7 @@ function checkContent(s1, s2) {
 
 console.log(checkContent("mitgroup", "gmtiprou")); // true
 console.log(checkContent("Hello", "Olelh")); // true
-console.log(checkContent("Test", "Taste")); // false
+console.log(checkContent("Newyork", "Yokrnew")); // false
 
 //Qo'shimcha:
 function checkAccess(user) {
