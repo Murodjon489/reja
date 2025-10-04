@@ -1,4 +1,16 @@
+//E TASK:
+function getReverse(rat) {
+  let natija = "";
+  for (let i = rat.length - 1; i >= 0; i--) {
+    natija += rat[i];
+  }
+  return natija;
+}
+
+console.log(getReverse("JUSTIN bro")); // "orb NITSUJ"
+
 //D TASK:
+/*
 function checkContent(s1, s2) {
   if (s1.length !== s2.length) {
     return false; // uzunliklar farqi bo'lsa agar, false
@@ -52,7 +64,7 @@ console.log(checkAccess(user2)); // Limited access
 console.log(checkAccess(user3)); // No access
 console.log(checkAccess(user4)); // No access
 console.log(checkAccess(user5)); // No access
-
+*/
 //C TASK:
 /*class Shop {
   constructor(non, osh, choy) {
