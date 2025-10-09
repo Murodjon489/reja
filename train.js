@@ -1,3 +1,19 @@
+//F TASK:
+function findingDoubles(prvt) {
+  for (let i = 0; i < prvt.length; i++) {
+    for (let j = i + 1; j < prvt.length; j++) {
+      if (prvt[i] === prvt[j]) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+console.log(findingDoubles("hello")); // true
+console.log(findingDoubles("home")); // false
+
+/*
 //E TASK:
 function getReverse(rat) {
   let natija = "";
@@ -8,7 +24,7 @@ function getReverse(rat) {
 }
 
 console.log(getReverse("JUSTIN bro")); // "orb NITSUJ"
-
+*/
 //D TASK:
 /*
 function checkContent(s1, s2) {
